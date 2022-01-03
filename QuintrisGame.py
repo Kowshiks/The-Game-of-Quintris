@@ -1,11 +1,4 @@
-# Quintris backend v0.2
-# D. Crandall, Sept 2021
-#
-# DON'T MODIFY THIS FILE! Or else we might not be able to grade your submission properly.
-#
-
-
-import sys, time, random, threading #, thread
+import sys, time, random, threading 
 
 class EndOfGame(Exception):
   def __init__(self,s) :
@@ -70,7 +63,6 @@ class QuintrisGame:
               [ (board[i+row][0:col] + QuintrisGame.combine(r, board[i+row][col:col+len(r)]) + board[i+row][col+len(r):] ) for (i, r) in enumerate(piece) ] + \
               board[row+len(piece):], score)
 
-  # remove any "full" rows from board, and increase score accordingly
   @staticmethod
   def remove_complete_lines(board, score):
     complete = [ i for (i, s) in enumerate(board) if s.count(' ') == 0 ]
@@ -101,9 +93,7 @@ class QuintrisGame:
     print("Next piece:\n" + "\n".join(self.next_piece))
     QuintrisGame.print_state(*QuintrisGame.place_piece(*self.state, self.piece, self.row, self.col))
 
-  ######
-  # These are the "public methods" that your code might want to call!
-  #
+ 
  
   # move piece left, if possible, else do nothing
   def left(self):
