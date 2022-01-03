@@ -1,9 +1,3 @@
-# Simple interactive version of quintris. v0.2
-# D. Crandall, Sept 2021
-#
-# DON'T MODIFY THIS FILE! Or else we might not be able to grade your submission properly.
-#
-
 
 from QuintrisGame import *
 
