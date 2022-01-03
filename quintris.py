@@ -1,5 +1,3 @@
-# Simple quintris program! v0.2
-# D. Crandall, Sept 2021
 
 from AnimatedQuintris import *
 from SimpleQuintris import *
